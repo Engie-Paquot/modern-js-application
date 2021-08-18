@@ -1,0 +1,26 @@
+.input-character-long-description {
+    min-height: 15rem;
+    padding-top: 2.5rem;
+}
+
+.ql-editor {
+    padding-left: 0;
+  
+
+}
+
+.ql-toolbar {
+    width: 100%;
+    z-index: 1;;
+    position: absolute;
+    border-radius: 15px;
+    background-color: white;
+    text-align: left;
+}
+
+.ql-editor.ql-blank::before {
+    color: rgb(182, 175, 175);
+    font-family: $paragraph-font;
+    font-size: 1.2rem;
+}
+    
