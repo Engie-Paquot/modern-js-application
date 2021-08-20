@@ -1,0 +1,29 @@
+{
+  "name": "@becode/js-intro",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx seve -e '*.json,*.md,node_modules,_shared' -p 8000 -i .",
+    "api": "npx json-server ./_shared/api.json"
+  },
+  "dependencies": {
+    "@github/markdown-toolbar-element": "^1.5.1",
+    "json-server": "^0.16.1"
+  },
+  "devDependencies": {
+    "seve": "^0.10.0"
+  },
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Engie-Paquot/modern-js-application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Engie-Paquot/modern-js-application/issues"
+  },
+  "homepage": "https://github.com/Engie-Paquot/modern-js-application#readme"
+}

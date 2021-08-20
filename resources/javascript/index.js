@@ -1,3 +1,4 @@
+import { fetcher } from './fetcher.js';
 (async() =>  {
     const loading = document.getElementById("loading")
     const addButton = document.getElementById("btn-character-add")
@@ -5,14 +6,18 @@
     const cards = document.getElementsByClassName("character-card")
     const template = document.getElementById("tpl-character")
     const target = document.getElementById("target")
-    const fetcher = async() => { //on crée une fonction async (pour pouvoir utiliser await)
-        let rawData = await fetch("https://character-database.becode.xyz/characters") // on va chercher les données et on utilise await parce que fetch prend plus de temps pour télécharger qu'il n'en faut au code pour passer a la ligne suivante 
-        return data = await rawData.json() //on convertit les données en un objet json et encore une fois on utilise await car la conversion prend plus de temps
-    }
+    //   const fetcher = async() => { //on crée une fonction async (pour pouvoir utiliser await)
+    /////////You do it here!
+    //       let rawData = await fetch("https://character-database.becode.xyz/characters") // on va chercher les données et on utilise await parce que fetch prend plus de temps pour télécharger qu'il n'en faut au code pour passer a la ligne suivante 
+    //       return data = await rawData.json() //on convertit les données en un objet json et encore une fois on utilise await car la conversion prend plus de temps
+    //   }
+    //import {faireTirage} from './fetcher.js';
 
     
-    await fetcher()
-    await data.forEach(character => {
+    // always make a variable when you collect something from a function.
+    //use the correct variable to loop over.
+    const data = await fetcher()
+    data.forEach(character => {
         const clone = template.content.cloneNode(true)
         const documentName = clone.getElementById("character-name")
         const documentShortDescription = clone.getElementById("character-small-description")
@@ -45,7 +50,7 @@
                     card.style.display = "flex"
                 }
             }
-
          })
+    
     
 })();
